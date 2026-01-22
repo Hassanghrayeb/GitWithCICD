@@ -5,7 +5,7 @@ on:
     - develop
 env:
   APP_NAME: app202
-  NODE_VERSION: "17"
+  NODE_VERSION: "18"
 
 jobs:
   build:
