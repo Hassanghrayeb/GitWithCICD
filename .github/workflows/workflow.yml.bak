@@ -1,1 +1,18 @@
 -name: My App CI/CD Pipeline
+
+-variables:
+    APP_NAME: myApp2
+    NODE_VERSION: "18"
+
+-triggers:
+    onPush:
+        branches:
+            -master
+
+-stages:
+    stage: Build
+        jobs:
+            job: Build
+                steps:
+                    -checkout: self
+                    -scripts: npm install && npm test
