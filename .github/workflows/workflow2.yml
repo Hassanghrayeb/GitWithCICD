@@ -1,7 +1,8 @@
 name: CI/CD Second Pipeline
 on:
   push:
-    branches: - develop
+    branches: 
+    - develop
 
 env:
   APP_NAME: app202
@@ -9,16 +10,16 @@ env:
 
 jobs:
   build:
-  runs-on: - ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Node
-      uses: actions/setup-node@v4'
-      with:
-        node-version: ${{ env.NODE_VERSION }}
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+  
+      - name: Setup Node
+        uses: actions/setup-node@v4'
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
     - name: BUILD
       script: npm install
