@@ -3,7 +3,6 @@ on:
   push:
     branches: 
     - develop
-
 env:
   APP_NAME: app202
   NODE_VERSION: "17"
@@ -21,6 +20,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-    - name: BUILD
-      script: npm install
+      - name: install dependencies
+        run: npm install
     
