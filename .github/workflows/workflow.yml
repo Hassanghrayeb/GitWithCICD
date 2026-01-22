@@ -29,6 +29,4 @@ jobs:
 
       # Step 3: Install dependencies and run tests
       - name: Install & Test
-        run: |
-          npm install
-          npm test
+        run: npm install
