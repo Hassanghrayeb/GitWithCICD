@@ -2,7 +2,7 @@ name: CI/CD Second Pipeline
 on:
   push:
     branches: 
-    - staging
+    - master
 env:
   APP_NAME: app202
   NODE_VERSION: "18"
