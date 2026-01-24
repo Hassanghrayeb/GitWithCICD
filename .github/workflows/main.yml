@@ -40,5 +40,5 @@ jobs:
           password: ${{ env.PASSWORD }}
 
       - name: build docker image
-        run: docker build -t angular-app-latest:1.0.0 -f Dockerfile.prod . && docker tag angular-app-latest:1.0.0 hasanghrayeb/angular-app:1.0.0 && docker push hasanghrayeb/angular-app:1.0.0   
+        run: docker build -t angular-app-latest:1.0.0 -f Dockerfile.prod . && docker tag angular-app-latest:1.0.0 hghrayeb96/angular-app:1.0.0 && docker push hghrayeb96/angular-app:1.0.0   
       
