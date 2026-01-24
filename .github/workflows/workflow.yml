@@ -2,7 +2,7 @@ name: pipeline3
 on:
   push:
     branches:
-      - staging
+    - staging
 
 env:
   APP_NAME: angularapp
