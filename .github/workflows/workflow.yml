@@ -1,32 +1,25 @@
-name: My App CI/CD Pipeline
-
-# Trigger pipeline on push to master branch
+name: CI/CD Second Pipeline
 on:
   push:
-    branches:
-      - master
-
-# Environment variables
+    branches: 
+    - staging
 env:
-  APP_NAME: myApp2
+  APP_NAME: app202
   NODE_VERSION: "18"
 
 jobs:
   build:
-    # Define the runner
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository code
-      - name: Checkout code
+      - name: checkout code
         uses: actions/checkout@v4
-
-      # Step 2: Setup Node.js
-      - name: Setup Node.js
+  
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Step 3: Install dependencies and run tests
-      - name: Install & Test
+      - name: install dependencies
         run: npm install
+    
